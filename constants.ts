@@ -1,0 +1,150 @@
+import { Quote } from './types';
+
+export interface Resource {
+  id: string;
+  title: string;
+  description: string;
+  link: string;
+  type: 'ebook' | 'video' | 'guia';
+}
+
+export const INITIAL_QUOTE: Quote = {
+  id: 'destiny-start',
+  text: "Ser forte não é aguentar tudo calado; é não abandonar a si mesmo quando tudo parece pesado. É segurar sua própria mão e seguir, mesmo tremendo. A verdadeira força é humana, imperfeita e profundamente persistente.",
+  author: "Mensagens Destino"
+};
+
+export const SUPPORT_RESOURCES: Resource[] = [
+  {
+    id: 'ebook-destino',
+    title: 'E-book Destino: O Poder das Palavras',
+    description: 'Um guia prático e inspirador para encontrar força nos dias difíceis.',
+    link: 'https://link-do-seu-google-drive-aqui.com', 
+    type: 'ebook'
+  },
+  {
+    id: 'comunidade-destino',
+    title: 'Nossa Comunidade',
+    description: 'Junte-se a outras pessoas em busca de propósito e superação.',
+    link: 'https://seu-link-da-comunidade-aqui.com',
+    type: 'guia'
+  }
+];
+
+export const QUOTES_LIBRARY: Quote[] = [
+  // Mensagens Bíblicas
+  { id: 'b1', text: "Deus é o nosso refúgio e fortaleza, uma ajuda sempre presente na dificuldade.", author: "Salmos 46:1" },
+  { id: 'b2', text: "Confie no Senhor de todo o seu coração e não se apoie em seu próprio entendimento.", author: "Provérbios 3:5" },
+  { id: 'b3', text: "Tudo posso naquele que me fortalece.", author: "Filipenses 4:13" },
+  { id: 'b4', text: "O Senhor é meu pastor, nada me faltará.", author: "Salmos 23:1" },
+  { id: 'b5', text: "Não se inquiete com nada, mas em tudo, por meio de oração e súplica, com ação de graças, apresente seus pedidos a Deus.", author: "Filipenses 4:6" },
+  { id: 'b6', text: "Porque eu sou o Senhor, o seu Deus, que o segura pela mão direita e lhe diz: Não tema, eu o ajudarei.", author: "Isaías 41:13" },
+  { id: 'b7', text: "O amor nunca falha.", author: "1 Coríntios 13:8" },
+  { id: 'b8', text: "Seja forte e corajoso! Não se intimide nem desanime, pois o Senhor, o seu Deus, estará com você onde quer que você for.", author: "Josué 1:9" },
+  { id: 'b9', text: "Lance todo o seu cuidado sobre ele, porque ele cuida de você.", author: "1 Pedro 5:7" },
+  { id: 'b10', text: "O Senhor é bom, é refúgio em tempos de angústia e conhece os que nele confiam.", author: "Naum 1:7" },
+  
+  // Mensagens Processadas (WhatsApp/Word)
+  { id: 'p1', text: "Nem todo mundo vai torcer por você. Nem todo mundo vai ficar feliz com suas conquistas. Às vezes, é até melhor que nem todo mundo saiba dos seus passos.", author: "Mensagens Destino" },
+  { id: 'p2', text: "Só quero ser feliz, sem carregar o peso do que já passou. Quero leveza nos dias, paz no coração e risadas que acontecem sem esforço.", author: "@respirareagradecer" },
+  { id: 'p3', text: "Deus vai fazer tudo novo. Não é mudança pequena, é recomeço de verdade. O passado deixa de doer e a comparação já não faz sentido.", author: "Isaías 65:17" },
+  { id: 'p4', text: "Jesus andava com muita gente, mas só poucos eram próximos de verdade. Presença não é intimidade, e proximidade não é confiança.", author: "Mateus 17:1–2" },
+  { id: 'p5', text: "Obrigado por ter sustentado cada passo, até quando a força parecia pouca. Que a noite seja abrigo, renovação e cuidado.", author: "Oração da Noite" },
+  { id: 'p6', text: "Decida não desistir. Continue, mesmo quando o caminho pesar mais do que o esperado. A vida é construída por quem insiste.", author: "Mensagens Destino" },
+  { id: 'p7', text: "O barato é o que a gente compra. O caro, quase sempre, é o que a gente perde: o abraço, a conversa, a presença.", author: "Reflexão" },
+  { id: 'p8', text: "Todos temos histórias e oportunidades diferentes, e Deus conduz cada uma no tempo certo. A vida não é uma comparação.", author: "Mensagens Destino" },
+  { id: 'p9', text: "Tem coisa que um dia eu pedi com lágrimas e hoje Deus me permite viver com o coração sorrindo. Deus segue sendo fiel.", author: "Testemunho" },
+  { id: 'p10', text: "Sempre existe uma chance de recomeçar, mesmo quando agora você não consegue enxergar. Enquanto houver vida, há esperança.", author: "Mensagens Destino" },
+  { id: 'p11', text: "Deus não faz nada pela metade. Quando Ele decide abençoar, é além do esperado. O que Deus vai fazer ultrapassará o que você imaginou.", author: "Profético" },
+  { id: 'p12', text: "As pessoas mudam, sim. O tempo ensina, a vida amadurece e a gente passa a enxergar tudo de outro jeito. A mudança começa quando a vontade é real.", author: "Reflexão" },
+  { id: 'p13', text: "Continue acreditando nas promessas de Deus. No tempo certo, quando o coração estiver preparado, tudo começa a fazer sentido.", author: "Mensagens Destino" },
+  { id: 'p14', text: "Ninguém vê o esforço diário feito em silêncio. Por isso a fé precisa ser maior que o cansaço e maior que o medo.", author: "Reflexão" },
+  { id: 'p15', text: "Quando você está em paz com quem é, para de se preocupar tanto com a forma como os outros te enxergam.", author: "Autoconhecimento" },
+  { id: 'p16', text: "Você merece flores em dias comuns, gestos simples, um bom-dia que abraça e um amor verdadeiro e inteiro.", author: "Mensagens Destino" },
+  { id: 'p17', text: "A vida é curta demais para carregar arrependimentos. Ame quem te trata bem e confie que tudo acontece por um motivo.", author: "Reflexão" },
+  { id: 'p18', text: "Não desanima se hoje tudo parecer simples ou silencioso demais. O que está sendo construído agora sustentará o que virá.", author: "Mensagens Destino" },
+  { id: 'p19', text: "Deus não conduz todas as pessoas do mesmo jeito. Não compare processos e não copie caminhos. Siga a voz que te orienta.", author: "Sabedoria" },
+  { id: 'p20', text: "Vencer na vida é conseguir dormir em paz, sem precisar passar por cima de ninguém. Vencer é estar bem com quem se é.", author: "Reflexão" },
+  { id: 'p21', text: "A certeza mais bonita de todas é saber que Deus nunca nos deixa atravessar nada sozinhos. Ele caminha junto em cada fase.", author: "Mensagens Destino" },
+  { id: 'p22', text: "Não se vingue. O mal que te fizeram volta em forma de consciência, e consciência pesada não deixa ninguém dormir em paz.", author: "Sabedoria" },
+  { id: 'p23', text: "Amizade de verdade é presença, incentivo e alegria sincera pelo crescimento do outro. A vida é sobre somar e celebrar juntos.", author: "Amizade" },
+  { id: 'p24', text: "Confio tanto em Deus que não forço mais nada. Faço a minha parte, entrego e deixo acontecer o que for melhor.", author: "Confiança" },
+  { id: 'p25', text: "A vida não anda em linha reta. Aproveite os dias bons sem culpa e, nos dias difíceis, siga firme. Tudo passa.", author: "Reflexão" },
+  { id: 'p26', text: "Se um dia eu tiver que explicar como atravessei os dias difíceis, falaria de fé. Algo me sustentava por dentro.", author: "Testemunho" },
+  { id: 'p27', text: "Muita gente carrega pesos invisíveis enquanto segue sorrindo. Mas Deus sabe, Ele vê o que ninguém vê e isso sustenta.", author: "Reflexão" },
+  { id: 'p28', text: "Valorize a amizade de quem te defende quando você não está por perto. Amizade de verdade vive de atitude silenciosa.", author: "Amizade" },
+  { id: 'p29', text: "A única forma de me impressionar é sendo de verdade. O que pesa mesmo é quem você é quando ninguém está olhando.", author: "Caráter" },
+  { id: 'p30', text: "A paz começa quando você entende que nem tudo está nas suas mãos, mas a forma como você reage, isso está.", author: "Sabedoria" },
+  { id: 'p31', text: "Não é por acaso que essa mensagem chegou até você. Deus já está movendo coisas a seu favor. Confie, Ele já está agindo.", author: "Profético" },
+  { id: 'p32', text: "Ter um coração bom não significa permitir desrespeito. É possível amar e, ao mesmo tempo, se posicionar com firmeza.", author: "Jesus como Exemplo" },
+  { id: 'p33', text: "Luxo mesmo é ter tempo para viver sem pressa, acordar com saúde e ter ao lado quem soma e faz bem.", author: "Reflexão" },
+  { id: 'p34', text: "Você não controla o jeito de ninguém, mas decide onde fica, o que aceita e até onde vale a pena continuar.", author: "Limites" },
+  { id: 'p35', text: "O que marca alguém não é o que ela mostra, é como faz o outro se sentir. Continuar sensível é uma forma de força.", author: "Reflexão" },
+  { id: 'p36', text: "Nem todo atraso é prejuízo. Às vezes é proteção. Tem livramento que chega em forma de algo que não aconteceu.", author: "Providência" },
+  { id: 'p37', text: "O céu também ouve as orações que a gente faz baixinho enquanto vive a rotina. A fé não vive só no altar, vive no dia a dia.", author: "Espiritualidade" },
+  { id: 'p38', text: "Que a mudança comece por dentro. Não adianta abrir mão do doce e continuar azedo no jeito de tratar as pessoas.", author: "Reflexão" },
+  { id: 'p39', text: "A vida de verdade não cabe em quinze segundos de internet. Nem tudo que aparece é conquista, e nem tudo que é discreto é perda.", author: "Realidade" },
+  { id: 'p40', text: "Oração não é para avisar Deus de nada, é para se aproximar. É abrir o coração e lembrar que existe Alguém que te ouve.", author: "Oração" },
+  { id: 'p41', text: "Que a gente prospere sem precisar competir. Cada um tem seu próprio tempo, sua vitória e sua cura.", author: "Reflexão" },
+  { id: 'p42', text: "Às vezes, fé é apenas permanecer, mesmo quando tudo o que temos é silêncio.", author: "Fé" },
+  { id: 'p43', text: "Aprenda a perceber Deus nas pequenas coisas: no silêncio que acalma, no atraso que ensina, na resposta que fortalece.", author: "Mensagens Destino" },
+  { id: 'p44', text: "Vai dar certo. O que hoje parece confuso vai se ajeitar. Esse aperto não fica para sempre, ele só atravessa.", author: "Esperança" },
+  { id: 'p45', text: "A vida é agora. O passado ensina, mas não precisa morar no coração. O que importa é o hoje que Deus coloca nas mãos.", author: "Reflexão" },
+  { id: 'p46', text: "Com o tempo a gente percebe que nem todo mundo que está perto é presença. Permanece quem escolhe ficar sem vantagem.", author: "Relacionamentos" },
+  { id: 'p47', text: "Que você não aceite pouco só porque está demorando. Algumas coisas levam tempo porque precisam ser sólidas e verdadeiras.", author: "Sabedoria" },
+  { id: 'p48', text: "Amadurecer não é dar conta de tudo, é aprender a se cuidar com mais carinho e responsabilidade.", author: "Reflexão" },
+  { id: 'p49', text: "A paz de Deus não depende da agenda do dia, mas da confiança no controle d'Ele.", author: "Isaías 26:3" },
+  { id: 'p50', text: "Quando você cresce em silêncio, o barulho que faz depois é impossível de ignorar. Seu esforço te levará onde você merece.", author: "Reflexão" },
+  { id: 'p51', text: "Deus não erra o caminho. Se Ele te colocou nessa fase, é porque tem um propósito maior que você ainda não vê.", author: "Confiança" },
+  { id: 'p52', text: "Antes mesmo de você nascer, Deus já tinha escrito cada detalhe da sua história. Nada foi por acaso.", author: "Mensagens Destino" },
+  { id: 'p53', text: "O Senhor te guardará de todo o mal; guardará a tua alma.", author: "Salmos 121:7" },
+  { id: 'p54', text: "Acordar já é um motivo de gratidão. Há vida, há cuidado e há propósito neste novo dia.", author: "Atos 17:28" },
+  { id: 'p55', text: "Eu mesmo o acompanharei e lhe darei descanso.", author: "Êxodo 33:14" },
+  { id: 'p56', text: "Algumas respostas só aparecem quando você para de procurar desesperadamente. Tem coisa que chega no silêncio.", author: "Sabedoria" },
+  { id: 'p57', text: "Você não desiste porque sabe em quem confia. Cada passo seu é prova de que a vitória vem da graça que te sustenta.", author: "Fé" },
+  { id: 'p58', text: "O Senhor vai abrir caminhos onde você só via obstáculos. Nada é impossível para Deus.", author: "Profético" },
+  { id: 'p59', text: "Entrega o teu caminho ao Senhor; confia nele, e ele tudo fará.", author: "Salmos 37:5" },
+  { id: 'p60', text: "O dia pode ser longo, mas Deus é constante do começo ao fim.", author: "Salmos 121:8" },
+  { id: 'p61', text: "Se você prestar atenção aos padrões da sua vida, vai perceber que tudo sempre dá certo no final. Cada experiência te leva a um destino maior.", author: "Reflexão" },
+  { id: 'p62', text: "A vida não manda sinal quando algo vai ser a última vez. Por isso, não guarde carinho, não adie presença.", author: "Sabedoria" },
+  { id: 'p63', text: "Ter Deus no seu barco não significa que você nunca enfrentará tempestades. Significa apenas que seu barco nunca afundará.", author: "Confiança" },
+  { id: 'p64', text: "Não é Deus que demora. Somos nós que ainda não estamos prontos para receber o que pedimos. Ele trabalha com propósito.", author: "Reflexão" },
+  { id: 'p65', text: "Cria em mim, ó Deus, um coração puro e renova em mim um espírito reto.", author: "Salmos 51:10" },
+  { id: 'p66', text: "Na fornalha, Deus não apagou o fogo, mas transformou o fogo em testemunho. O que era para te destruir se torna o lugar onde Ele se revela.", author: "Mensagens Destino" },
+  { id: 'p67', text: "Muitas vezes Deus remove pessoas da sua vida para que você possa caminhar mais rápido. Agradeça pelos livramentos.", author: "Sabedoria" },
+  { id: 'p68', text: "As misericórdias do Senhor não têm fim; renovam-se cada manhã.", author: "Lamentações 3:22" },
+  { id: 'p69', text: "Reconhece-o em todos os teus caminhos, e ele endireitará as tuas veredas.", author: "Provérbios 3:6" },
+  { id: 'p70', text: "Existem decisões silenciosas que ninguém vê, mas que mudam toda a trajetória de uma vida.", author: "Reflexão" },
+  { id: 'p71', text: "O tempo de Deus é perfeito em surpreender quem não perde a fé. O que está por vir é maior do que você imagina.", author: "Profético" },
+  { id: 'p72', text: "Antes que haja palavra na minha língua, eis que, ó Senhor, tudo conheces.", author: "Salmos 139:4" },
+  { id: 'p73', text: "O Senhor é a minha força e o meu escudo; nele o meu coração confia.", author: "Salmos 28:7" },
+  { id: 'p74', text: "Nem todo crescimento faz barulho. Às vezes ele acontece no silêncio, quando você escolhe continuar.", author: "Reflexão" },
+  { id: 'p75', text: "Deus não desiste do escolhido. O escolhido também erra, mas a diferença é que Deus permanece fiel.", author: "Mensagens Destino" },
+  { id: 'p76', text: "Respire. A vida não te trouxe até aqui por acaso. Você carrega uma força que supera o que te pesa.", author: "Reflexão" },
+  { id: 'p77', text: "Rendei graças ao Senhor, porque ele é bom, porque a sua misericórdia dura para sempre.", author: "Salmos 136:1" },
+  { id: 'p78', text: "Deus não se atrasa. O tempo do Senhor sempre chega no momento exato. Confiar também é esperar.", author: "Confiança" },
+  { id: 'p79', text: "Este é o dia que o Senhor fez; regozijemo-nos e alegremo-nos nele.", author: "Salmos 118:24" },
+  { id: 'p80', text: "Consagre ao Senhor tudo o que você faz, e os seus planos serão bem-sucedidos.", author: "Provérbios 16:3" },
+  { id: 'p81', text: "Há coisas que não deram certo não porque faltou fé, mas porque Deus viu tudo e poupou você.", author: "Livramento" },
+  { id: 'p82', text: "Perto está o Senhor dos que têm o coração quebrantado e salva os de espírito oprimido.", author: "Salmos 34:18" },
+  { id: 'p83', text: "O Senhor te abençoe e te guarde.", author: "Números 6:24" },
+  { id: 'p84', text: "Vinde a mim, todos os que estais cansados e oprimidos, e eu vos aliviarei.", author: "Mateus 11:28" },
+  { id: 'p85', text: "O descanso da alma não vem da ausência de tarefas, mas da certeza de que Deus está presente.", author: "Reflexão" },
+  { id: 'p86', text: "Aquietai-vos e sabei que eu sou Deus.", author: "Salmos 46:10" },
+  { id: 'p87', text: "O Senhor é quem vai adiante de ti; Ele será contigo.", author: "Deuteronômio 31:8" },
+  { id: 'p88', text: "Propósito não é pressa. É constância. Deus constrói coisas grandes a partir do que é simples e fiel.", author: "Sabedoria" },
+  { id: 'p89', text: "A fúria do inimigo é saber que a mão de Deus continua te sustentando. O sangue de Jesus é o que te guarda.", author: "Proteção" },
+  { id: 'p90', text: "Você não faz ideia do que Deus te livrou hoje. Tem livramento disfarçado de acaso. Agradeça sempre.", author: "Mensagens Destino" },
+  { id: 'p91', text: "Nem sempre Deus vai acalmar a tempestade; às vezes, Ele vai acalmar você no meio dela.", author: "Paz" },
+  { id: 'p92', text: "Ninguém vai entender a sua mudança, mas Jesus está muito orgulhoso de você. Continue!", author: "Reflexão" },
+  { id: 'p93', text: "Eles dizem que é sorte, mas é sobre um coração que orou em silêncio. É fé regada de lágrimas.", author: "Testemunho" },
+  { id: 'p94', text: "Não há público para impressionar, nem pessoas para agradar. Siga seu próprio ritmo e faça por você.", author: "Sabedoria" },
+  { id: 'p95', text: "Depois que você sente o gosto da paz, não tem mais volta. A paz se torna seu ponto de referência.", author: "Reflexão" },
+  { id: 'p96', text: "Shalom não é apenas a ausência de problemas, é a presença de Deus colocando ordem onde havia confusão.", author: "Paz Real" },
+  { id: 'p97', text: "Olho nenhum viu, ouvido nenhum ouviu, o que Deus preparou para aqueles que o amam.", author: "I Coríntios 2:9" },
+  { id: 'p98', text: "Deus não te dá o que você quer, Ele te dá o que você precisa para crescer. Maturidade é o degrau para a próxima fase.", author: "Crescimento" },
+  { id: 'p99', text: "Tudo o que você fizer dará certo e a luz brilhará no seu caminho.", author: "Jó 22:28" },
+  { id: 'p100', text: "Deus tem um propósito para sua dor, uma razão para sua luta e uma recompensa por sua fidelidade. Não desista!", author: "Mensagens Destino" },
+];
+
+export const APP_CONTACT_EMAIL = "portalmensagensdestino@gmail.com";
